@@ -1,6 +1,6 @@
 ﻿namespace Calculator_test
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -56,6 +56,7 @@
             this.buttonEqual.TabIndex = 2;
             this.buttonEqual.Text = "=";
             this.buttonEqual.UseVisualStyleBackColor = true;
+            this.buttonEqual.Click += new System.EventHandler(this.ButtonEqual_Click);
             // 
             // textResult
             // 
@@ -65,17 +66,18 @@
             this.textResult.Size = new System.Drawing.Size(100, 20);
             this.textResult.TabIndex = 3;
             // 
-            // Form1
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textResult);
             this.Controls.Add(this.buttonEqual);
             this.Controls.Add(this.textNumber2);
             this.Controls.Add(this.textNumber1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Calculator";
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
