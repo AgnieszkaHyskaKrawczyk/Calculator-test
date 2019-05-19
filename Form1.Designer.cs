@@ -32,11 +32,12 @@
             this.textNumber2 = new System.Windows.Forms.TextBox();
             this.buttonEqual = new System.Windows.Forms.Button();
             this.textResult = new System.Windows.Forms.TextBox();
+            this.labelPlus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textNumber1
             // 
-            this.textNumber1.Location = new System.Drawing.Point(89, 168);
+            this.textNumber1.Location = new System.Drawing.Point(80, 170);
             this.textNumber1.Name = "textNumber1";
             this.textNumber1.Size = new System.Drawing.Size(100, 20);
             this.textNumber1.TabIndex = 0;
@@ -65,6 +66,16 @@
             this.textResult.Name = "textResult";
             this.textResult.Size = new System.Drawing.Size(100, 20);
             this.textResult.TabIndex = 3;
+            this.textResult.TextChanged += new System.EventHandler(this.TextResult_TextChanged);
+            // 
+            // labelPlus
+            // 
+            this.labelPlus.AutoSize = true;
+            this.labelPlus.Location = new System.Drawing.Point(197, 173);
+            this.labelPlus.Name = "labelPlus";
+            this.labelPlus.Size = new System.Drawing.Size(13, 13);
+            this.labelPlus.TabIndex = 4;
+            this.labelPlus.Text = "+";
             // 
             // Calculator
             // 
@@ -72,12 +83,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPlus);
             this.Controls.Add(this.textResult);
             this.Controls.Add(this.buttonEqual);
             this.Controls.Add(this.textNumber2);
             this.Controls.Add(this.textNumber1);
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,6 +102,7 @@
         private System.Windows.Forms.TextBox textNumber2;
         private System.Windows.Forms.Button buttonEqual;
         private System.Windows.Forms.TextBox textResult;
+        private System.Windows.Forms.Label labelPlus;
     }
 }
 
